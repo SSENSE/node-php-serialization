@@ -205,14 +205,7 @@
     ///serialize;
 
     function lenString(string) {
-        var length=0;
-        for (var i=0;i<string.length;i++,length++) {
-            var c=string.charCodeAt(i);
-            if (c>255) {
-                length+=2;
-            }
-        }
-        return length;
+        return Buffer.byteLength(string, 'utf8');
     }
 
     function serialize_item(body,type,namespace) {

@@ -1,5 +1,5 @@
 {
-  "name": "php-serialization",
+  "name": "@ssense/php-serialization",
   "version": "0.0.4",
   "description": "A library used to serialize and unserialize like it was in php (especially useful for manipulating laravel sessions stored with redis server)",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/joesonw/node-php-serialization"
+    "url": "git@github.com:SSENSE/node-php-serialization.git"
   },
   "keywords": [
     "php",
@@ -28,8 +28,12 @@
     "chai": "~3.2.0"
   },
   "author": "Qiaosen Huang",
+  "contributors": [{
+    "name": "Rémy Jeancolas",
+    "email": "remy.jeancolas@illogeek.eu"
+  }],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/joesonw/node-php-serialization/issues"
+    "url": "https://github.com/SSENSE/node-php-serialization/issues"
   }
 }
