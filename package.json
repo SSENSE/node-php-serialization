@@ -1,6 +1,6 @@
 {
   "name": "@ssense/php-serialization",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A library used to serialize and unserialize like it was in php (especially useful for manipulating laravel sessions stored with redis server)",
   "main": "index.js",
   "scripts": {
