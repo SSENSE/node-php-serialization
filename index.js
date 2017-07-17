@@ -6,6 +6,18 @@
     exports.serialize=serialize;
 	exports.Class=Class;
 
+    function getCharCodeLen(c) {
+         var len =  c < (1 <<  7) ? 1 :
+                    c < (1 << 11) ? 2 :
+                    c < (1 << 16) ? 3 :
+                    c < (1 << 21) ? 4 :
+                    c < (1 << 26) ? 5 :
+                    c < (1 << 31) ? 6 : Number.NaN;
+         if (Number.isNaN(len))
+           throw new Error("CharCode is NaN");
+         else
+           return len;
+     }
 
     function read(string,length) {
         var counter=0;
@@ -27,9 +39,7 @@
             if (c===0 && scope==="private") {
                 continue;
             }
-            if (c>255) {
-                counter+=2;
-            }
+            counter += getCharCodeLen(c) - 1;
             buf+=String.fromCharCode(c);
         }
         return {result:buf,scope:scope,length:counter};
